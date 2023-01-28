@@ -1,10 +1,11 @@
+/* Global Styles */
 body {
   font-family: ibm-plex-mono, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 16px;
   line-height: 1.5;
-}
+  }
 
 h3 {
     font-size: 24px;
@@ -14,12 +15,21 @@ h3 {
     font-style: normal;
 } 
 
-.section {
-  min-height: 100vh;
-  display: flex;
+.wrapper {
+  scroll-snap-type: y proximity;
+  overflow: scroll;
 }
 
-/* Section Padding  */
+section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;  
+}
+
 .section-pad {
   padding: 0 5vw;
 }
@@ -29,9 +39,19 @@ h3 {
   margin: auto;
 }
 
+/* Intro Section */
 #intro {
   /* background-image: url(./assets/christian-lue-zJJn3XmdyS8-unsplash.jpg); */
   background-color: #2828ea;
+}
+
+.logo h1 {
+  font-family: obviously-wide, sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  font-style: normal;
+  margin-bottom: 32px;
+  color: white;
 }
 
 .intro p {
@@ -47,11 +67,24 @@ h3 {
   background-repeat: no-repeat;
 }
 
-.logo h1 {
-  font-family: obviously-wide, sans-serif;
-  font-weight: 600;
-  font-size: 48px;
-  font-style: normal;
-  margin-bottom: 32px;
-  color: white;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  50% {
+    transform: translate(0);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.appear {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
