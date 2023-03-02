@@ -44,20 +44,20 @@ section {
 }
 
 .container {
-  max-width: 810px;
+  max-width: 1000px;
   margin: auto;
 }
 
 /* Intro Section */
 #intro {
-  background-image: url(assets/ffflux\ \(3\).svg);
-  background-color: #0037ff;
+  background-image: url(assets/gggrain9.svg);
+  background-color: var(--blue);
 }
 
 .logo {
   display: block;
   text-align: center;
-  max-width: 200px;
+  max-width: 210px;
   margin: 0 auto;
 }
 
@@ -66,10 +66,13 @@ section {
 }
 
 .intro p {
-  font-size: 24px;
-  line-height: 1.3;
-  font-weight: 600;
-  
+  font-size: 28px;
+  line-height: 130%;
+  letter-spacing: 0;
+  font-family: ibm-plex-mono, sans-serif;;
+  font-weight: 500;
+  color: white;
+  /* font-style: italic; */
 }
 
 .bg-cover {
@@ -103,16 +106,34 @@ section {
 
 .marquee {
   position: absolute;
-  top: 3vh;
+  top: 2vh;
   left: 0;
   width: 100%;
   font-size: 5vh;
-  line-height: 1;
+  line-height: 1.6;
+  overflow: hidden;
 }
 
 .marquee span {
   white-space: nowrap;
   display: block;
   position: relative;
+  font-family: obviously-extended, sans-serif;
+  font-weight: 600;
+  animation: moveLeft 200s infinite;
+  animation-timing-function: ease-out;
 }
 
+.mix-difference {
+  mix-blend-mode: color-dodge;
+  color: var(--pink);
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0)
+  }
+  100% {
+    transform: translateX(-1000vw);
+  }
+}
