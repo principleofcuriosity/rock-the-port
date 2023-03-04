@@ -1,5 +1,7 @@
 @import url("https://use.typekit.net/byp8buf.css");
 
-.marquee {
-    font-family: ibm-plex-mono, sans-serif;
+.marquee,
+.lunch-medium,
+.date {
+    font-family: obviously-wide, sans-serif;
 }

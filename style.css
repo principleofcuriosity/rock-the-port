@@ -1,7 +1,9 @@
 :root {
-  --blue: #0037ff;
-  --pink: #ff70f2;
-  --black: rgb(25, 25, 25); 
+  --blue: #000FE0;
+  --pink: #FF81F4;
+  --autumn: #F16020; 
+  --black: rgb(25, 25, 25);
+  --white: white;
 }
 
 /* Global Styles */
@@ -11,16 +13,8 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 1.5;
+  background-color: var(--blue);
   }
-
-
-h3 {
-  font-size: 24px;
-  font-weight: 700;
-  font-family: obviously-wide, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-} 
 
 .wrapper {
   scroll-snap-type: y proximity;
@@ -50,9 +44,16 @@ section {
 
 /* Intro Section */
 #intro {
-  background-image: url(assets/gggrain9.svg);
-  background-color: var(--blue);
+  
 }
+
+.intro {
+  background-image: url(assets/irina-anuchina-ZXuXQvhM16E-unsplash_NOISE-pink.jpg);
+}
+
+/* #intro::before {
+  background-image: url(assets/irina-anuchina-ZXuXQvhM16E-unsplash.jpg);
+} */
 
 .logo {
   display: block;
@@ -65,13 +66,20 @@ section {
   width: 100%;
 }
 
+.arrow-down {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem; /* REVIEW HERE: Probably need Calc in order to center it vertically */
+}
+
 .intro p {
-  font-size: 28px;
-  line-height: 130%;
+  text-align: center;
+  font-size: 32px;
+  line-height: 42px;
   letter-spacing: 0;
   font-family: ibm-plex-mono, sans-serif;;
-  font-weight: 500;
-  color: white;
+  font-weight: 600;
+  color: var(--blue);
   /* font-style: italic; */
 }
 
@@ -109,7 +117,7 @@ section {
   top: 2vh;
   left: 0;
   width: 100%;
-  font-size: 5vh;
+  font-size: 36px;
   line-height: 1.6;
   overflow: hidden;
 }
@@ -122,10 +130,11 @@ section {
   font-weight: 600;
   animation: moveLeft 200s infinite;
   animation-timing-function: ease-out;
+  color: var(--blue);
 }
 
 .mix-difference {
-  mix-blend-mode: color-dodge;
+  mix-blend-mode: multiply;
   color: var(--pink);
 }
 
@@ -137,3 +146,58 @@ section {
     transform: translateX(-1000vw);
   }
 }
+
+/* Day Sections */
+
+.day-1 {
+  background-color: var(--blue);
+} 
+
+.day-2 {
+  background-color: var(--autumn);
+}
+
+.day-3 {
+  background-color: var(--pink);
+}
+
+.date {
+  font-family: 'Obviously-Extended';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 29px;
+  color: var(--white);
+} 
+
+.lineup h2 {
+  color: var(--white);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.lineup p {
+  color: var(--white);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.lineup .tba {
+  font-weight: bold;
+}
+
+#day-3 > div:nth-child(1) > h3:nth-child(1),
+#day-3 > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > h2:nth-child(2) {
+  color: blue;
+  }s
+ {
+  color: var(--blue);
+  }
+
