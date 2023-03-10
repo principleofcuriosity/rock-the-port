@@ -19,6 +19,9 @@ body {
 .wrapper {
   scroll-snap-type: y proximity;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 section {
@@ -129,7 +132,7 @@ section {
   font-family: obviously-extended, sans-serif;
   font-weight: 600;
   animation: moveLeft 200s infinite;
-  animation-timing-function: ease-out;
+  animation-timing-function: linear;
   color: var(--blue);
 }
 
